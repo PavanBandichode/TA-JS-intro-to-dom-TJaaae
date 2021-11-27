@@ -1,11 +1,11 @@
 // Select the h1 element and store it in a variable named heading.
-
+let heading = document.querySelector("h1");
 // Check the typeof heading and log it.
-
+console.log(typeof heading, "Q.2");
 // Change the color of heading to black.
-
+heading.style.color = "black";
 // Select all the hr elements and store it in a variable named allHrs using querySelectorAll
-
+let allHrs = document.querySelectorAll("hr");
 /* 
 Convert the NodeList returned by querySelectorAll to Array using Array.from() or spread operator and store it in allHrsArray
 
@@ -14,21 +14,24 @@ Array.from converts an array kind of data into array so we can use methods like 
 HINT:
 let allHrsArray = Array.from(allHrs)
 */
-
+let allHrsArray = Array.from([...allHrs]);
 // Set the border of the all the hr elements to "1px solid tomato"
-
+allHrsArray.forEach((x) => (x.style.border = "1px solid tomato"));
 // Change the background of all the hr to "antiquewhite" using for of loop.
-
+// for (let elem of allHrsArray.length - 1) {
+//   elem.style.backgroundColor = "antiquewhite";
+// }
 // Change the 'border-radius' of all the hr to "5px" using array.
-
+allHrsArray.forEach((x) => (x.style.borderRadius = "5px"));
 // Change the alignment of the heading(h1) to center.
-
+heading.style.textAlign = "center";
 // Change the font size of the heading to 3rem.
-
+heading.style.fontSize = "3rem";
 // Change the border of hr with class 'image' to `2px solid purple`.
-
+// document.querySelector(".image").style.border = "2px solid purple";
 // Hide the box number 17 (last box).
-
+let lastBlock = document.querySelector(".seventeen");
+lastBlock.style.display = "none";
 // Change the border of all the hr element from solid to dashed type
 
 // Create a pragraph element and store it in variable named 'para' using `createElement`
