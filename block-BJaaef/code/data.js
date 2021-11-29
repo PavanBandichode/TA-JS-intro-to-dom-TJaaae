@@ -326,3 +326,42 @@ let got = {
     },
   ],
 };
+/* <li class="wd-30">
+  <div class="flex-center">
+    <img
+      class="image"
+      src="https://raw.githubusercontent.com/nnnkit/json-data-collections/master/game-of-thrones/game-of-thrones-eddard-stark.jpg"
+      alt=""
+    />
+    <h2>'Eddard "Ned" Stark'</h2>
+  </div>
+  <p>
+    "Lord of Winterfell - Warden of the North - Hand of the King - Married to
+    Catelyn (Tully) Stark"
+  </p>
+  <button class="btn">Learn More!</button>
+</li>; */
+
+let ul = document.querySelector("ul");
+
+got.houses.forEach((elm) => {
+  for (people of elm.people) {
+    let li = document.createElement("li");
+    li.classList.add("wd-30");
+    let div = document.createElement("div");
+    div.classList.add("flex-center");
+    let img = document.createElement("img");
+    img.classList.add("image");
+    img.src = people.image;
+    let h2 = document.createElement("h2");
+    h2.innerText = people.name;
+    let p = document.createElement("p");
+    p.innerText = people.description;
+    let button = document.createElement("button");
+    button.innerText = "Learn More!";
+    button.classList.add("btn");
+    div.append(img, h2);
+    li.append(div, p, button);
+    ul.append(li);
+  }
+});
